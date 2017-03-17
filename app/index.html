@@ -1,13 +1,37 @@
 <!doctype html>
-<html lang="">
+<html ng-app='gitApp'>
   <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='app/styles/main.css'></link>
+    <script type='text/javascript' src ='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js'></script>
+    <script type='text/javascript' src='app/scripts/main.js'></script>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='shortcut icon' href=''>
     <title>ChurchDesk Front-End Challenge</title>
   </head>
-
   <body>
     <h1>Welcome to the ChurchDesk Front-End Challenge.</h1>
+    <br>
+    <a class='search'>Search git users: </a>
+    <br>
+    <br>
+    <div ng-controller='gitController'>
+      <form ng-submit='searchGit()'>
+        <!-- take in a search string for angular controller to search git -->
+        <input type='text' ng-model='searchString'/>
+        <button type='submit'>Search</button>
+      </form>
+        <br>
+        <br>
+      <h2 class='name'>{{userName}}</h2>
+        <br>
+      <img ng-src={{userImage}}></img>
+        <br>
+      <ul>
+        <li class='keys' ng-repeat='(key, value) in users'>
+        {{key}} : {{value}}
+        </li>
+    </div>
   </body>
 </html>

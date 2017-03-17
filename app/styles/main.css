@@ -1,0 +1,22 @@
+.name {
+	font-family: 'Helvetica';
+	font-size: 35px;
+}
+
+.keys {
+	font-family: 'Georgia';
+	size: 50px;
+	color: #565654;
+}
+
+.search {
+  font-size: 30px;
+  font-family: 'Helvetica';
+  color: #756d72;
+}
+
+img {
+	height: 300px;
+	width: 300px;
+	border-radius: 75px;
+}
